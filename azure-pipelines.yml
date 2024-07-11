@@ -10,9 +10,6 @@ pool:
   name: sc-assigment
   vmImage: ubuntu-latest
 steps:
-- task: ShellScript@2
-  inputs:
-    scriptPath: 'curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash'
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'SC-Assigment(4)(4374baaa-b603-4ca4-8b3f-a6f9ea403e9d)'
