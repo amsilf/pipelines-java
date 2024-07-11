@@ -11,13 +11,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: AzureCLI@2
   inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    azureSubscription: 'SC-Assigment(4)(4374baaa-b603-4ca4-8b3f-a6f9ea403e9d)'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az --version'
+
