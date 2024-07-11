@@ -10,10 +10,14 @@ pool:
   name: sc-assigment
   vmImage: ubuntu-latest
 steps:
-- task: AzureCLI@2
+- task: Maven@3
   inputs:
-    azureSubscription: 'SC-Assigment(4)(4374baaa-b603-4ca4-8b3f-a6f9ea403e9d)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az --version'
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 
