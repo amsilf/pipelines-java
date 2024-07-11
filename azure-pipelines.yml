@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: my-pc
+  name: assignemnt-pool
   vmImage: ubuntu-latest
 
 steps:
