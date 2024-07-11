@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: assignemnt-pool
+  name: sc-assigment
   vmImage: ubuntu-latest
 
 steps:
